@@ -135,6 +135,7 @@ extension HomeHotViewCell {
     _nameLabel.snp.makeConstraints { (make) in
       make.top.equalTo(_avatarImageView.snp.top)
       make.leading.equalTo(_avatarImageView.snp.trailing).offset(10)
+      make.width.equalTo(80)
     }
     
     _startImageView.snp.makeConstraints { (make) in

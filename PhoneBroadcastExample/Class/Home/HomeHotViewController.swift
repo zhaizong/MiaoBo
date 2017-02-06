@@ -57,22 +57,22 @@ class HomeHotViewController: UIViewController, PBKStoryboardViewController {
     // Dispose of any resources that can be recreated.
   }
   
-  override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-    guard let change = change else { return }
-    
-    let newOffsetY = (change[.newKey] as! CGPoint).y
-    let oldOffsetY = (change[.oldKey] as! CGPoint).y
-    if newOffsetY > oldOffsetY {
-      hotScrollDirection = .up
-    } else if newOffsetY < oldOffsetY {
-      hotScrollDirection = .down
-    }
-    offsetChangedClosure?(newOffsetY, hotScrollDirection)
-  }
+//  override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+//    guard let change = change else { return }
+//    
+//    let newOffsetY = (change[.newKey] as! CGPoint).y
+//    let oldOffsetY = (change[.oldKey] as! CGPoint).y
+//    if newOffsetY > oldOffsetY {
+//      hotScrollDirection = .up
+//    } else if newOffsetY < oldOffsetY {
+//      hotScrollDirection = .down
+//    }
+//    offsetChangedClosure?(newOffsetY, hotScrollDirection)
+//  }
   
-  deinit {
-    _hotCollectionView.removeObserver(self, forKeyPath: "contentOffset")
-  }
+//  deinit {
+//    _hotCollectionView.removeObserver(self, forKeyPath: "contentOffset")
+//  }
   
 }
 
@@ -122,7 +122,7 @@ extension HomeHotViewController {
     }
     _hotCollectionView.mj_header.beginRefreshing()
     
-    _hotCollectionView.addObserver(self, forKeyPath: "contentOffset", options: [.new, .old], context: nil)
+//    _hotCollectionView.addObserver(self, forKeyPath: "contentOffset", options: [.new, .old], context: nil)
   }
   
   fileprivate func _setupHot() {

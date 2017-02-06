@@ -46,9 +46,9 @@ extension HomeViewController {
     UIApplication.shared.statusBarStyle = .lightContent
     view.backgroundColor = PBK_Main_Background_Color
     
-    debugPrint(PBK_Screen_Height)
-    debugPrint(tabBarController!.tabBar.frame.origin.y)
-    debugPrint(tabBarController!.tabBar.frame.size.height)
+//    debugPrint(PBK_Screen_Height)
+//    debugPrint(tabBarController!.tabBar.frame.origin.y)
+//    debugPrint(tabBarController!.tabBar.frame.size.height)
     
     navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "search_15x14"), style: .done, target: self, action: nil)
     navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "head_crown_24x24"), style: .done, target: self, action: nil)
@@ -70,7 +70,6 @@ extension HomeViewController {
     layout.minimumInteritemSpacing = 0
     layout.minimumLineSpacing = 0
     layout.scrollDirection = .horizontal
-    layout.estimatedItemSize = UIScreen.main.bounds.size
     layout.itemSize = UIScreen.main.bounds.size
     layout.sectionInset = .zero
     let homeframe = CGRect(origin: CGPoint(x: 0, y: 64 + _titleScrollViewHeight), size: CGSize(width: PBK_Screen_Width, height: PBK_Screen_Height))
@@ -90,7 +89,7 @@ extension HomeViewController {
   fileprivate func _setupChildViewController() {
     let hotViewController: HomeHotViewController = HomeHotViewController.instanceFromStoryboard()
     addChildViewController(hotViewController)
-    hotViewController.offsetChangedClosure = { [weak self] (offsetY: CGFloat, direction: HotScrollDirection) in
+    /*hotViewController.offsetChangedClosure = { [weak self] (offsetY: CGFloat, direction: HotScrollDirection) in
       guard let weakSelf = self else { return }
       guard offsetY > 0 else { return }
       if direction == .up { // 向上滑动，隐藏
@@ -103,7 +102,7 @@ extension HomeViewController {
         }
       }
     }
-    
+    */
     let newViewController: HomeNewestCollectionViewController = HomeNewestCollectionViewController.instanceFromStoryboard()
     addChildViewController(newViewController)
   }

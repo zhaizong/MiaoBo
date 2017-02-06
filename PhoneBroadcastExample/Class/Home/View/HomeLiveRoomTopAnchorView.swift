@@ -29,7 +29,7 @@ class HomeLiveRoomTopAnchorView: UIView {
       
       _peopleLabel.text = "\(live.allnum)人"
       
-      _timer = Timer(timeInterval: 1, target: self, selector: #selector(_updateNum), userInfo: nil, repeats: true)
+      _timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(_updateNum), userInfo: nil, repeats: true)
       
 //      _headImageView.isUserInteractionEnabled = true
     }
@@ -67,6 +67,11 @@ class HomeLiveRoomTopAnchorView: UIView {
   
   required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
+  }
+  
+  deinit {
+    _timer?.invalidate()
+    _timer = nil
   }
 
 }

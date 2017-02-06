@@ -108,7 +108,6 @@ extension HomeLiveRoomCollectionViewController {
     }
     
     // Configure the cell
-//    cell.parentVC = self
     cell.live = lives[currentIndex]
     var relateIndex = currentIndex
     if currentIndex + 1 == lives.count {

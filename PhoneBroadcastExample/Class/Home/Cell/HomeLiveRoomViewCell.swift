@@ -35,21 +35,19 @@ class HomeLiveRoomViewCell: UICollectionViewCell {
 //  gif 
   fileprivate var _gifImageView: UIImageView?
   
-//  fileprivate var _timer: Timer?
+  fileprivate var _timer: Timer?
 //  直播播放器
   fileprivate var _ijkPlayer: IJKFFMoviePlayerController?
 //  粒子动画
   fileprivate lazy var _emitterLayer: CAEmitterLayer? = { [weak self] in
     guard let weakSelf = self else { return nil }
     let lazilyCreatedEmitter = CAEmitterLayer()
-    if let ijkPlayer = weakSelf._ijkPlayer {
-//    发射器在xy平面的中心位置
-      lazilyCreatedEmitter.emitterPosition = CGPoint(x: ijkPlayer.view.frame.size.width - 50,
-                                                     y: ijkPlayer.view.frame.size.height - 50)
-      ijkPlayer.view.layer.insertSublayer(lazilyCreatedEmitter, below: weakSelf._catEarView!.layer)
-    }
+    lazilyCreatedEmitter.emitterPosition = CGPoint(x: weakSelf._ijkPlayer!.view.frame.size.width - 50,
+                                                   y: weakSelf._ijkPlayer!.view.frame.size.height - 50)
 //    发射器的尺寸大小
     lazilyCreatedEmitter.emitterSize = CGSize(width: 20, height: 20)
+//    渲染模式
+    lazilyCreatedEmitter.renderMode = kCAEmitterLayerUnordered
     var cells: [CAEmitterCell] = []
     // create emitter
     for index in 1...9 {
@@ -62,7 +60,9 @@ class HomeLiveRoomViewCell: UICollectionViewCell {
 //      粒子的生存时间容差
       stepCell.lifetimeRange = 1.5
 //      粒子显示的内容 good1_30x30_
-      stepCell.contents = UIImage(named: "good\(index)_30x30_")?.cgImage
+      if let image = UIImage(named: "good\(index)_30x30_") {
+        stepCell.contents = image.cgImage
+      }
 //      粒子的运动速度
       stepCell.velocity = CGFloat(arc4random_uniform(100) + 100)
 //      粒子速度的容差
@@ -76,6 +76,7 @@ class HomeLiveRoomViewCell: UICollectionViewCell {
       cells.append(stepCell)
     }
     lazilyCreatedEmitter.emitterCells = cells
+    weakSelf._ijkPlayer!.view.layer.insertSublayer(lazilyCreatedEmitter, below: weakSelf._catEarView!.layer)
     return lazilyCreatedEmitter
   }()
 //  同一个工会的主播/相关主播
@@ -92,6 +93,7 @@ class HomeLiveRoomViewCell: UICollectionViewCell {
       make.right.equalTo(weakSelf._catEarView!.snp.right)
       make.bottom.equalTo(weakSelf._catEarView!.snp.top).offset(-40)
     })
+    lazilyCreatedOtherImageView.isHidden = true
     return lazilyCreatedOtherImageView
   }()
 //  同类型直播视图
@@ -107,6 +109,7 @@ class HomeLiveRoomViewCell: UICollectionViewCell {
         make.size.equalTo(98)
       })
     }
+    lazilyCreatedCatEarView.isHidden = true
     return lazilyCreatedCatEarView
   }()
 //  直播开始前的占位图
@@ -117,8 +120,6 @@ class HomeLiveRoomViewCell: UICollectionViewCell {
   fileprivate var _bottomToolView: HomeLiveRoomBottomView
 //  直播结束的界面
   fileprivate var _liveEndView: HomeLiveRoomEndView
-  
-  fileprivate var _isSelected: Bool = false
   
   // MARK: - Lifecycle
   
@@ -148,8 +149,6 @@ extension HomeLiveRoomViewCell {
     _bottomToolView.bottomToolBarClosure = { [weak self] (type) in
       guard let weakSelf = self else { return }
       switch type {
-      case .publicTalk:
-        weakSelf._isSelected = !weakSelf._isSelected
       case .close:
         weakSelf._close()
       default:
@@ -269,16 +268,16 @@ extension HomeLiveRoomViewCell {
       _catEarView?.removeFromSuperview()
       _catEarView = nil
       
+      //    如果切换主播, 取消之前的动画
+      _emitterLayer?.removeFromSuperlayer()
+      _emitterLayer = nil
+      
       _ijkPlayer?.shutdown()
       _ijkPlayer?.view.removeFromSuperview()
       _ijkPlayer = nil
       NotificationCenter.default.removeObserver(self)
     }
-//    如果切换主播, 取消之前的动画
-    if let _ = _emitterLayer {
-      _emitterLayer?.removeFromSuperlayer()
-      _emitterLayer = nil
-    }
+
  
     YYWebImageManager.shared().requestImage(with: URL(string: placeholder)!, options: .useNSURLCache, progress: nil, transform: nil) { (image, url, type, stage, error) in
       DispatchQueue.main.async {

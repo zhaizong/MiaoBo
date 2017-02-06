@@ -1,0 +1,32 @@
+PODS:
+  - LFLiveKit (2.6)
+  - MJRefresh (3.1.12)
+  - Reachability (3.2)
+  - SnapKit (3.1.2)
+  - YYCache (1.0.4)
+  - YYImage (1.0.4):
+    - YYImage/Core (= 1.0.4)
+  - YYImage/Core (1.0.4)
+  - YYWebImage (1.0.5):
+    - YYCache
+    - YYImage
+
+DEPENDENCIES:
+  - LFLiveKit
+  - MJRefresh
+  - Reachability
+  - SnapKit
+  - YYWebImage
+
+SPEC CHECKSUMS:
+  LFLiveKit: 2219563721f8aa0f188effc3395a06e2d53b23f2
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  SnapKit: 12b24f569cb7c143acc9c22b9d91b23e7b1c84a2
+  YYCache: 8105b6638f5e849296c71f331ff83891a4942952
+  YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
+  YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
+
+PODFILE CHECKSUM: ec15f59e6887beaf6da1b850e38975ff41343fc8
+
+COCOAPODS: 1.1.1

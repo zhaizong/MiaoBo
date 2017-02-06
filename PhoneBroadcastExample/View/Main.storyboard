@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5Wz-mt-OMp">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="iq1-t7-eFl">
+            <objects>
+                <tabBarController storyboardIdentifier="PBKTabBarController" id="5Wz-mt-OMp" customClass="PBKTabBarController" customModule="PhoneBroadcastKit" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Rs6-sa-evo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aRl-ve-R57" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-942" y="29"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="7b1-Mg-DTf">
+            <objects>
+                <viewController id="roA-Fl-rAb" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Oh6-Ki-3WA"/>
+                        <viewControllerLayoutGuide type="bottom" id="jvb-0g-0d8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Sza-MP-kXK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_1854" translatesAutoresizingMaskIntoConstraints="NO" id="JdW-gk-9Tk">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.78823529411764703" green="0.28235294117647058" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JdW-gk-9Tk" firstAttribute="top" secondItem="Sza-MP-kXK" secondAttribute="top" id="7g3-WK-qcT"/>
+                            <constraint firstAttribute="trailing" secondItem="JdW-gk-9Tk" secondAttribute="trailing" id="OKq-fo-m1I"/>
+                            <constraint firstItem="JdW-gk-9Tk" firstAttribute="bottom" secondItem="jvb-0g-0d8" secondAttribute="top" id="d1B-Qf-dKa"/>
+                            <constraint firstItem="JdW-gk-9Tk" firstAttribute="leading" secondItem="Sza-MP-kXK" secondAttribute="leading" id="rvY-OV-mGc"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qzn-l0-eLg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-943.20000000000005" y="686.80659670164926"/>
+        </scene>
+        <!--Splash View Controller-->
+        <scene sceneID="O5d-28-A0U">
+            <objects>
+                <viewController storyboardIdentifier="SplashViewController" id="kG6-yS-5HJ" customClass="SplashViewController" customModule="PhoneBroadcastExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OKo-Ep-3a7"/>
+                        <viewControllerLayoutGuide type="bottom" id="QQR-4U-O20"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="e8l-8Q-AZP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchImage" translatesAutoresizingMaskIntoConstraints="NO" id="uz7-Iw-IgH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="uz7-Iw-IgH" secondAttribute="trailing" id="4xz-pU-uAM"/>
+                            <constraint firstItem="uz7-Iw-IgH" firstAttribute="bottom" secondItem="QQR-4U-O20" secondAttribute="top" id="LMc-gY-hah"/>
+                            <constraint firstItem="uz7-Iw-IgH" firstAttribute="top" secondItem="e8l-8Q-AZP" secondAttribute="top" id="evK-wR-zDi"/>
+                            <constraint firstItem="uz7-Iw-IgH" firstAttribute="leading" secondItem="e8l-8Q-AZP" secondAttribute="leading" id="vGu-V0-PfR"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aLD-fr-O7f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-216.80000000000001" y="28.335832083958024"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="IMG_1854" width="640" height="1136"/>
+        <image name="LaunchImage" width="320" height="480"/>
+    </resources>
+</document>

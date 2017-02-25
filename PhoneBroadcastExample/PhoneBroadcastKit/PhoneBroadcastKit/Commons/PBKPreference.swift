@@ -12,14 +12,16 @@ import UIKit
 struct PreferenceCommons {
   //  代表App启动次数
   static let AppLaunchTimes = "applaunchtimes"
+  
+  static let AppLaunchLanguage = "cn"
 }
-// 偏好设置
+// 用户偏好设置
 public class PBKPreference: NSObject {
   
   // MARK: - Public
   
   /// 用户 App 是否第一次启动
-  var preferredAppLaunchTimes: String {
+  public var preferredAppLaunchTimes: String {
     get {
       assert(_isDevicePreference)
       return _preferredAppLaunchTimes
@@ -44,7 +46,7 @@ public class PBKPreference: NSObject {
   
   // MARK: - Lifecycle
   
-  class func sharedPreference() -> PBKPreference {
+  public class func sharedPreference() -> PBKPreference {
     
     if let preference = _sharedPreference {
       return preference
@@ -96,7 +98,7 @@ extension PBKPreference {
   fileprivate func _devicePreferenceFolderPath() -> String {
     
     let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
-    let folderPath = documentsPath + "/mybilibili"
+    let folderPath = documentsPath + "/miaobo"
     return folderPath
   }
   

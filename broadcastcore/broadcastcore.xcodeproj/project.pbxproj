@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D2645D21E52E5A7008C7C3C /* FMDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D2645C61E52E5A7008C7C3C /* FMDatabase.h */; };
+		2D2645D31E52E5A7008C7C3C /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2645C71E52E5A7008C7C3C /* FMDatabase.m */; };
+		2D2645D41E52E5A7008C7C3C /* FMDatabaseAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D2645C81E52E5A7008C7C3C /* FMDatabaseAdditions.h */; };
+		2D2645D51E52E5A7008C7C3C /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2645C91E52E5A7008C7C3C /* FMDatabaseAdditions.m */; };
+		2D2645D61E52E5A7008C7C3C /* FMDatabasePool.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D2645CA1E52E5A7008C7C3C /* FMDatabasePool.h */; };
+		2D2645D71E52E5A7008C7C3C /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2645CB1E52E5A7008C7C3C /* FMDatabasePool.m */; };
+		2D2645D81E52E5A7008C7C3C /* FMDatabaseQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D2645CC1E52E5A7008C7C3C /* FMDatabaseQueue.h */; };
+		2D2645D91E52E5A7008C7C3C /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2645CD1E52E5A7008C7C3C /* FMDatabaseQueue.m */; };
+		2D2645DA1E52E5A7008C7C3C /* FMDB.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D2645CE1E52E5A7008C7C3C /* FMDB.h */; };
+		2D2645DB1E52E5A7008C7C3C /* FMResultSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D2645CF1E52E5A7008C7C3C /* FMResultSet.h */; };
+		2D2645DC1E52E5A7008C7C3C /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2645D01E52E5A7008C7C3C /* FMResultSet.m */; };
 		2D49E2A11E39B2FA00BC023B /* PBCHot.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D49E29F1E39B2FA00BC023B /* PBCHot.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2D49E2A21E39B2FA00BC023B /* PBCHot.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D49E2A01E39B2FA00BC023B /* PBCHot.m */; };
 		2D49E2A61E39B32D00BC023B /* PBCHotManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D49E2A41E39B32D00BC023B /* PBCHotManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -60,9 +71,23 @@
 		2DA713B71E390705007C4FA6 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA713961E390705007C4FA6 /* UIWebView+AFNetworking.m */; };
 		2DA713BA1E39086A007C4FA6 /* PBCHTTPRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DA713B81E39086A007C4FA6 /* PBCHTTPRequest.h */; };
 		2DA713BB1E39086A007C4FA6 /* PBCHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA713B91E39086A007C4FA6 /* PBCHTTPRequest.m */; };
+		2DCC305E1E56B8AF00DF8B4A /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DCC305D1E56B8AF00DF8B4A /* libsqlite3.tbd */; };
+		2DE560291E594991002F1DD1 /* PBCObjectManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DE560271E594991002F1DD1 /* PBCObjectManager.h */; };
+		2DE5602A1E594991002F1DD1 /* PBCObjectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DE560281E594991002F1DD1 /* PBCObjectManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D2645C61E52E5A7008C7C3C /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		2D2645C71E52E5A7008C7C3C /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		2D2645C81E52E5A7008C7C3C /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		2D2645C91E52E5A7008C7C3C /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		2D2645CA1E52E5A7008C7C3C /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		2D2645CB1E52E5A7008C7C3C /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		2D2645CC1E52E5A7008C7C3C /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		2D2645CD1E52E5A7008C7C3C /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		2D2645CE1E52E5A7008C7C3C /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		2D2645CF1E52E5A7008C7C3C /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		2D2645D01E52E5A7008C7C3C /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		2D49E29F1E39B2FA00BC023B /* PBCHot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBCHot.h; sourceTree = "<group>"; };
 		2D49E2A01E39B2FA00BC023B /* PBCHot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBCHot.m; sourceTree = "<group>"; };
 		2D49E2A31E39B31C00BC023B /* PBCHot_CoreAddition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PBCHot_CoreAddition.h; sourceTree = "<group>"; };
@@ -121,6 +146,9 @@
 		2DA713961E390705007C4FA6 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		2DA713B81E39086A007C4FA6 /* PBCHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBCHTTPRequest.h; sourceTree = "<group>"; };
 		2DA713B91E39086A007C4FA6 /* PBCHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBCHTTPRequest.m; sourceTree = "<group>"; };
+		2DCC305D1E56B8AF00DF8B4A /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		2DE560271E594991002F1DD1 /* PBCObjectManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBCObjectManager.h; sourceTree = "<group>"; };
+		2DE560281E594991002F1DD1 /* PBCObjectManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBCObjectManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,12 +156,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DCC305E1E56B8AF00DF8B4A /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D2645C51E52E5A7008C7C3C /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				2D2645C61E52E5A7008C7C3C /* FMDatabase.h */,
+				2D2645C71E52E5A7008C7C3C /* FMDatabase.m */,
+				2D2645C81E52E5A7008C7C3C /* FMDatabaseAdditions.h */,
+				2D2645C91E52E5A7008C7C3C /* FMDatabaseAdditions.m */,
+				2D2645CA1E52E5A7008C7C3C /* FMDatabasePool.h */,
+				2D2645CB1E52E5A7008C7C3C /* FMDatabasePool.m */,
+				2D2645CC1E52E5A7008C7C3C /* FMDatabaseQueue.h */,
+				2D2645CD1E52E5A7008C7C3C /* FMDatabaseQueue.m */,
+				2D2645CE1E52E5A7008C7C3C /* FMDB.h */,
+				2D2645CF1E52E5A7008C7C3C /* FMResultSet.h */,
+				2D2645D01E52E5A7008C7C3C /* FMResultSet.m */,
+			);
+			name = fmdb;
+			path = fmdb/src/fmdb;
+			sourceTree = "<group>";
+		};
 		2D49E29E1E39B25300BC023B /* LiveHot */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +252,8 @@
 			children = (
 				2D6EF2FE1E35EA8600A0984A /* PBCDirector.h */,
 				2D6EF2FF1E35EA8600A0984A /* PBCDirector.m */,
+				2DE560271E594991002F1DD1 /* PBCObjectManager.h */,
+				2DE560281E594991002F1DD1 /* PBCObjectManager.m */,
 			);
 			path = Director;
 			sourceTree = "<group>";
@@ -234,6 +284,7 @@
 		2DA7136C1E38F761007C4FA6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2DCC305D1E56B8AF00DF8B4A /* libsqlite3.tbd */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -241,6 +292,7 @@
 		2DA713731E39069C007C4FA6 /* vendor */ = {
 			isa = PBXGroup;
 			children = (
+				2D2645C51E52E5A7008C7C3C /* fmdb */,
 				2DA713741E390705007C4FA6 /* AFNetworking */,
 			);
 			path = vendor;
@@ -309,7 +361,10 @@
 				2DA7139C1E390705007C4FA6 /* AFSecurityPolicy.h in Headers */,
 				2DA713601E38C1FA007C4FA6 /* PBCLiveBanner.h in Headers */,
 				2DA713BA1E39086A007C4FA6 /* PBCHTTPRequest.h in Headers */,
+				2D2645D61E52E5A7008C7C3C /* FMDatabasePool.h in Headers */,
+				2D2645D21E52E5A7008C7C3C /* FMDatabase.h in Headers */,
 				2DA713B61E390705007C4FA6 /* UIWebView+AFNetworking.h in Headers */,
+				2DE560291E594991002F1DD1 /* PBCObjectManager.h in Headers */,
 				2DA713AF1E390705007C4FA6 /* UIImageView+AFNetworking.h in Headers */,
 				2D49E2A11E39B2FA00BC023B /* PBCHot.h in Headers */,
 				2D49E2A61E39B32D00BC023B /* PBCHotManager.h in Headers */,
@@ -321,10 +376,14 @@
 				2D6EF3001E35EA8600A0984A /* PBCDirector.h in Headers */,
 				2D4FC4241E4042C100112277 /* PBCNewestManager.h in Headers */,
 				2DA713991E390705007C4FA6 /* AFNetworking.h in Headers */,
+				2D2645D41E52E5A7008C7C3C /* FMDatabaseAdditions.h in Headers */,
+				2D2645D81E52E5A7008C7C3C /* FMDatabaseQueue.h in Headers */,
 				2DA713AA1E390705007C4FA6 /* UIActivityIndicatorView+AFNetworking.h in Headers */,
 				2D4FC4201E40429100112277 /* PBCNewest.h in Headers */,
 				2DA713A21E390705007C4FA6 /* AFURLSessionManager.h in Headers */,
+				2D2645DA1E52E5A7008C7C3C /* FMDB.h in Headers */,
 				2D6EF2F81E35E91F00A0984A /* PhoneBoradcastCore.h in Headers */,
+				2D2645DB1E52E5A7008C7C3C /* FMResultSet.h in Headers */,
 				2DA713971E390705007C4FA6 /* AFHTTPSessionManager.h in Headers */,
 				2DA713A01E390705007C4FA6 /* AFURLResponseSerialization.h in Headers */,
 				2DA713651E38E629007C4FA6 /* PBCLiveBannerManager.h in Headers */,
@@ -365,6 +424,7 @@
 				TargetAttributes = {
 					2D6EF2E21E35E62000A0984A = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -401,6 +461,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DE5602A1E594991002F1DD1 /* PBCObjectManager.m in Sources */,
 				2DA7139D1E390705007C4FA6 /* AFSecurityPolicy.m in Sources */,
 				2D49E2A71E39B32D00BC023B /* PBCHotManager.m in Sources */,
 				2D4FC4211E40429100112277 /* PBCNewest.m in Sources */,
@@ -414,13 +475,18 @@
 				2DA7136B1E38F47D007C4FA6 /* PBCHTTPSessionManager.m in Sources */,
 				2DA713B31E390705007C4FA6 /* UIProgressView+AFNetworking.m in Sources */,
 				2DA7139B1E390705007C4FA6 /* AFNetworkReachabilityManager.m in Sources */,
+				2D2645D71E52E5A7008C7C3C /* FMDatabasePool.m in Sources */,
+				2D2645D31E52E5A7008C7C3C /* FMDatabase.m in Sources */,
 				2DA713661E38E62A007C4FA6 /* PBCLiveBannerManager.m in Sources */,
 				2DA713A91E390705007C4FA6 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				2D2645D91E52E5A7008C7C3C /* FMDatabaseQueue.m in Sources */,
+				2D2645DC1E52E5A7008C7C3C /* FMResultSet.m in Sources */,
 				2DA713B01E390705007C4FA6 /* UIImageView+AFNetworking.m in Sources */,
 				2DA713AD1E390705007C4FA6 /* UIButton+AFNetworking.m in Sources */,
 				2DA713B51E390705007C4FA6 /* UIRefreshControl+AFNetworking.m in Sources */,
 				2DA713B71E390705007C4FA6 /* UIWebView+AFNetworking.m in Sources */,
 				2DA7139F1E390705007C4FA6 /* AFURLRequestSerialization.m in Sources */,
+				2D2645D51E52E5A7008C7C3C /* FMDatabaseAdditions.m in Sources */,
 				2DA713BB1E39086A007C4FA6 /* PBCHTTPRequest.m in Sources */,
 				2D49E2A21E39B2FA00BC023B /* PBCHot.m in Sources */,
 				2DA713A51E390705007C4FA6 /* AFAutoPurgingImageCache.m in Sources */,
@@ -530,6 +596,7 @@
 		2D6EF2EC1E35E62000A0984A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -544,12 +611,16 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Zly.broadcastcore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		2D6EF2ED1E35E62000A0984A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -564,6 +635,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Zly.broadcastcore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

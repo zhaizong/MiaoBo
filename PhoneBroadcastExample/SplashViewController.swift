@@ -19,6 +19,9 @@ class SplashViewController: UIViewController, PBKStoryboardViewController {
     PBCDirector.default()?.resetManagers()
     // PBCDirector.default()?.signIn()...
     
+//    PBKPreference.sharedPreference().preferredAppLaunchTimes
+    PBCDirector.default()?.initOrDie()
+    
     _setupApperance()
   }
   

@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class FMDatabase;
+
 @class PBCLiveBannerManager;
 @class PBCHotManager;
 @class PBCNewestManager;
@@ -44,6 +46,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (void)resetDefaultDirector:(nullable PBCDirector *)director;
 
+- (BOOL)initOrDie;
+
 @end
 
 @interface PBCDirector ()
@@ -51,6 +55,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) PBCLiveBannerManager *bannerManager;
 @property (nonatomic, strong, readonly) PBCHotManager *hotManager;
 @property (nonatomic, strong, readonly) PBCNewestManager *newestManager;
+
+@property (nonatomic, strong, readonly) FMDatabase *main_db_;
 
 - (void)resetManagers;
 

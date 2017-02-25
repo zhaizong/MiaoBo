@@ -147,8 +147,14 @@ extension HomeHotViewController {
   }
   
   fileprivate func _setupBanner() {
+    _banners.removeAll(keepingCapacity: false)
+    if let banners = PBCLiveBannerManager.default().fetchBannerFromCache() {
+      // 将缓存的 banners 先显示在界面上，之后再在网络请求中获取新的 banners
+      _banners = banners
+      _hotCollectionView.reloadData()
+    }
+    
     PBCLiveBannerManager.default().getLiveBannerSuccess({ (banners) in
-      self._banners.removeAll(keepingCapacity: false)
       self._banners = banners
       self._hotCollectionView.reloadData()
     }) { (error) in

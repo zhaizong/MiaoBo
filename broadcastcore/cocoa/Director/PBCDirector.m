@@ -6,6 +6,8 @@
 //  Copyright © 2017年 Crazy. All rights reserved.
 //
 
+#import "FMDB.h"
+
 #import "PBCDirector.h"
 #import "PBCLiveBannerManager.h"
 #import "PBCHotManager.h"
@@ -18,6 +20,8 @@ static PBCDirector *_sharedDirector;
   PBCLiveBannerManager *_bannerManager;
   PBCHotManager *_hotManager;
   PBCNewestManager *_newestManager;
+  
+  FMDatabase *_main_db_;
 }
 
 @end
@@ -31,6 +35,48 @@ static PBCDirector *_sharedDirector;
     
   }
   return self;
+}
+
+- (BOOL)initOrDie {
+  // Create folder if not exists
+  NSString *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+  NSString *folder_path = [path stringByAppendingString:@"/uid/"];
+  NSString *main_db_path = [folder_path stringByAppendingString:@"MiaoBo.db"];
+  NSLog(@"database path is %@", main_db_path);
+  
+  if (![[NSFileManager defaultManager] fileExistsAtPath:folder_path]) {
+    [[NSFileManager defaultManager] createDirectoryAtPath:folder_path withIntermediateDirectories:YES attributes:nil error:nil];
+  }
+  
+  BOOL success = YES;
+  
+  do {
+    // Open SQLite
+    _main_db_ = [FMDatabase databaseWithPath:main_db_path];
+    @try {
+      success = [_main_db_ open];
+    } @catch (NSException *exception) {
+      NSLog(@"Director cannot open database: %@", exception.reason);
+      return NO;
+    }
+    
+    if (!success) {
+      break;
+    }
+    
+    // Init tables
+    // Banner manager
+    success = [_bannerManager initOrDie];
+    if (!success) {
+      break;
+    }
+    
+    // Init WebApi
+    
+  } while (0);
+  
+  [_main_db_ close];
+  return success;
 }
 
 - (void)dealloc {

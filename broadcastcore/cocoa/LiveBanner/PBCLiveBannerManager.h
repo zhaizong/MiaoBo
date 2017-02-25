@@ -19,6 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)defaultManager;
 
+- (BOOL)initOrDie;
+
 ///-----------------------------------------
 /// @name HTTP
 ///-----------------------------------------
@@ -30,6 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///-----------------------------------------
 
 //- (nullable PBCLiveBanner *)fetchBannerFromCacheByUid:(NSString *)uid;
+- (nullable NSArray<PBCLiveBanner *> *)fetchBannerFromCache;
 
 @end
 NS_ASSUME_NONNULL_END
